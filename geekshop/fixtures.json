@@ -1,0 +1,34 @@
+[
+  {
+    "model": "mainapp.category",
+    "pk": 1,
+    "fields": {
+      "name": "Дом",
+      "description": "описание категории дом"
+    }
+  },
+  {
+    "model": "mainapp.category",
+    "pk": 2,
+    "fields": {
+      "name": "Офис",
+      "description": "описание категории офис"
+    }
+  },
+  {
+    "model": "mainapp.category",
+    "pk": 3,
+    "fields": {
+      "name": "Модерн",
+      "description": "описание категории модерн"
+    }
+  },
+  {
+    "model": "mainapp.category",
+    "pk": 4,
+    "fields": {
+      "name": "Классика",
+      "description": "описание категории классика"
+    }
+  }
+]

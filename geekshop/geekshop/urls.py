@@ -26,14 +26,10 @@ urlpatterns = [
     path('', views.index, name='index'),
 
     path('products/', include('mainapp.urls', namespace='products')),
+    path('auth/', include('authapp.urls', namespace='authapp')),
 
     path('contact/', views.contact, name='contact'),
 
-    path('products/all', views.products, name='products_all'),
-    path('products/home', views.products, name='products_home'),
-    path('products/office', views.products, name='products_office'),
-    path('products/modern', views.products, name='products_modern'),
-    path('products/classic', views.products, name='products_classic'),
 
     # path('', views.index),
 ]
