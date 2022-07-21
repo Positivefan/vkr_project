@@ -17,17 +17,19 @@ class Category(models.Model):
 class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
     name = models.CharField(max_length=128, verbose_name='Название')
-    image = models.ImageField(upload_to='product', blank=True, null=True, verbose_name='Изображение')
-    short_desc = models.CharField(max_length=128, verbose_name='Краткое описание')
+    product_code = models.CharField(max_length=20, verbose_name='Название')
     description = models.TextField(verbose_name='Описание')
     price = models.DecimalField(max_digits=8, decimal_places=2, verbose_name='Цена')
-    quantity = models.PositiveSmallIntegerField(default=0, verbose_name='Количество')
+    price_our = models.DecimalField(max_digits=8, decimal_places=2, verbose_name='Старая_Цена')
+    link_text = models.CharField(max_length=128, verbose_name='Ссылка')
+    link_img = models.CharField(max_length=128, verbose_name='Ссылка_на_изображение')
 
     def __str__(self):
-        return f'#{self.pk} {self.name} ({self.category.name})'
+        return f'#{self.pk} {self.product_code} {self.name} ({self.category.name})'
 
     class Meta:
         verbose_name = 'Продукт'
         verbose_name_plural = 'Продукты'
+        ordering = ('pk',)
 
 

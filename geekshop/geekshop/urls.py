@@ -24,6 +24,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', views.index, name='index'),
+    path('test_add', views.test_add, name='test_add'),
+    path('test_add2', views.test_add2, name='test_add2'),
+    path('test_parse', views.test_parse, name='test_parse'),
+    path('export', views.export, name='export'),
 
     path('products/', include('mainapp.urls', namespace='products')),
     path('auth/', include('authapp.urls', namespace='authapp')),

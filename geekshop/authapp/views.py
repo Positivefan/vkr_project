@@ -2,11 +2,11 @@ from django.shortcuts import render, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib import auth
 
-from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditForm
+from authapp.forms import ShopUserLoginForm_1, ShopUserRegisterForm, ShopUserEditForm
 
 
 def login(request):
-    login_form = ShopUserLoginForm(data=request.POST)
+    login_form = ShopUserLoginForm_1(data=request.POST)
     if request.method == 'POST' and login_form.is_valid():
         username = request.POST.get('username')
         password = request.POST.get('password')

@@ -1,18 +1,21 @@
 {% extends 'mainapp/base.html' %}
 {% load static %}
 {% block menu %}
-		<div class="slider">
-			<div class="header clearfix">
+		<div class="slider" style="bgcolor='ffffff'">>
+			<div class="header clearfix" ">
 				{% include 'mainapp/includes/inc_main_menu.html'%}
 
 			</div>
-			<div class="text-slider">
-				<h3 class="green">Приступая к работе</h3>
-				<h3 class="medium"> Для обновления базы по товарам Pyramex, выберите соответствующий пункт меню</h3>
-				<p>Для дополнительной информации или ручного редактирования товаров Вы можете перейти в Панель администратора</p>
-				<a href="{%	url 'test_add' %}" class="button-order"> Parse now <img src="{% static 'img/arrow.png' %}" alt=""></a>
-				<a href="http://127.0.0.1:8000/export" class="button-order"> Старый csv<img src="{% static 'img/arrow.png' %}" alt=""></a>
+			<div style="margin-top: 100px">
+				<img src="{% static 'img/loading-25.gif' %}" height="20%", width="20%"></a><br><br><br>
+<!--				<img src="{% static 'img/loader.gif' %}" height="30%", width="30%"></a><br><br><br>-->
+				<h3 class="green">Результат будет готов через несколько минут.</h3>
+				<h3 class="big"> ожидание парсера</h3>
+				<p>Вы будете перенаправлены, когда программа завершит выполнение...</p>
+				<a href="http://127.0.0.1:8000/export" class="button-order"> Почти готово...</a>
+<!--				<a href="http://127.0.0.1:8000/export" class="button-order"> Скачать csv<img src="{% static 'img/arrow.png' %}" alt=""></a>-->
 			</div>
+
 <!--			<div class="navi">-->
 <!--				<a href="#"></a><a href="#"></a><a href="#"></a>-->
 <!--			</div>-->
@@ -22,16 +25,9 @@
 {% block content %}
 	<br>
 	<p class="small"> Current date and time: {% now 'H:i:s d-m-Y' %}</p>
+
+	<p class="small"> {{ my_name_is.2 }}</p>
 	<br>
-	{% for current_user in user_list %}
-		{% if current_user.age > 10 %}
-			<p>
-			Name: {{ current_user.first_name|title }} {{ current_user.last_name|title }} <br>
-			Age: {{ current_user.age }}
-			</p>
-			<hr>
-		{% endif %}
-	{% endfor %}
 
 
 

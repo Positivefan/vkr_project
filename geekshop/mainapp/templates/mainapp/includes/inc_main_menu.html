@@ -1,8 +1,15 @@
-<a href="{%	url 'index' %}" class="logo"></a>
+{% load static %}
+<a href="{%	url 'index' %}"  ><img style ="
+	margin-top: 13px;
+
+	float: left;
+" src="{% static 'img/logotype.jpg' %}" alt=""></a>
 <ul class="menu">
-    <li><a href="{%	url 'index' %}" {% if request.resolver_match.url_name == 'index' %}class="active"{% endif %}>домой</a></li>
-    <li><a href="{%	url 'products:products_hot_product' %}" {% if request.resolver_match.url_name == 'products' %}class="active"{% endif %}>продукты</a></li>
-    <li><a href="{%	url 'contact' %}" {% if request.resolver_match.url_name == 'contact' %}class="active"{% endif %}>контакты</a></li>
+<!--    <li><a href="{%	url 'test_parse' %}">Parse now!</a></li>-->
+    <li><a href="{%	url 'test_add' %}">Запустить парсинг Pyramex</a></li>
+
+    <li><a href="{%	url 'index' %}" {% if request.resolver_match.url_name == 'index' %}class="active"{% endif %}>стартовая</a></li>
+
 
     {% if user.is_authenticated %}
         <li>
@@ -17,6 +24,8 @@
             <a href="{%	url 'authapp:login' %}" >Вход</a>
         </li>
     {% endif %}
+        <li>
+            <a style="border-left:2px solid grey; padding-left:8px;" href="http://127.0.0.1:8000/admin">Панель администратора</a>
+        </li>
+
 </ul>
-<a href="#" class="search"></a>
-<a href="#" class="basket"></a>

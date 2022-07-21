@@ -96,7 +96,7 @@ html, body {
 	clear: both;
 }
 .text-slider {
-	margin-top: 288px;
+	margin-top: 100px;
 	position: absolute;
 }
 
@@ -111,7 +111,7 @@ html, body {
 .button-order {
 	background-color:  #ffffff;
 	box-shadow: 0px 2px 4.85px 0.15px rgba(33, 33, 33, 0.35);
-	width: 212px;
+	width: 312px;
 	height: 45px;
 	display: block;
 	text-transform: uppercase;
@@ -125,6 +125,7 @@ html, body {
 	margin-top: 32px; 
 	letter-spacing: 3px;
 }
+
 .button-order:hover {
 	box-shadow: none;
 }
@@ -133,7 +134,7 @@ html, body {
 	margin-top: 35px;
 }
 .button-order img{
-	padding-left: 22px;
+	padding-left: 62px;
 }
 
 .green {
