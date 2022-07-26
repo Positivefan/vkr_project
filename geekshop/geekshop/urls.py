@@ -25,7 +25,7 @@ urlpatterns = [
 
     path('', views.index, name='index'),
     path('test_add', views.test_add, name='test_add'),
-    path('test_add2', views.test_add2, name='test_add2'),
+    path('test_parce_rdy', views.test_parce_rdy, name='test_parce_rdy'),
     path('test_parse', views.test_parse, name='test_parse'),
     path('export', views.export, name='export'),
 

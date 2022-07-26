@@ -17,7 +17,7 @@ def contact(request):
     return render(request, 'mainapp/contact.html')
 
 def test_parse(request):
-    mainapp.parce_pmx.goParse()
+    # mainapp.parce_pmx.goParse()
 
     context = {
     }
@@ -55,9 +55,9 @@ def test_add(request):
             '3': '22',
         }
     }
-    test_add2
+    test_parce_rdy
     return render(request, 'mainapp/index_waiting.html', context)
-def test_add2(request):
+def test_parce_rdy(request):
     context = {
 
 
